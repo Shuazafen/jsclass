@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="shortcut icon" href="hat.png" type="image/x-icon">
+    <title>Onix Login Form</title>
+    <style>* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #212121;
+}
+.box {
+  position: relative;
+  width: 380px;
+  height: 420px;
+  background: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #90CAF9,
+    #90CAF9,
+    #90CAF9
+  );
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+}
+.box::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #90CAF9,
+    #90CAF9,
+    #90CAF9
+  );
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+.borderline {
+  position: absolute;
+  top: 0;
+  inset: 0;
+}
+.borderline::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #A5D6A7,
+    #A5D6A7,
+    #A5D6A7
+  );
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -1.5s;
+}
+.borderline::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #A5D6A7,
+    #A5D6A7,
+    #A5D6A7
+  );
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -4.5s;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.box form {
+  position: absolute;
+  inset: 4px;
+  background: #263238;
+  padding: 50px 40px;
+  border-radius: 8px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+.box form h2 {
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+.inputbox {
+  position: relative;
+  width: 300px;
+  margin-top: 35px;
+}
+.inputbox input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+  color: #fff;
+  font-size: 1em;
+  transition: 0.5s;
+  letter-spacing: 0.1cm;
+  z-index: 10px;
+  border-right: 0px;
+}
+.inputbox span {
+  position: absolute;
+  left: 0;
+  padding: 20px 10px 10px;
+  pointer-events: none;
+  color: #8f8f8f;
+  font-size: 1em;
+  transition: 0.5s;
+  letter-spacing: 0.1cm;
+}
+.inputbox input:valid ~ span,
+.inputbox input:focus ~ span {
+  color: #fff;
+  font-size: 0.75em;
+  transform: translateY(-34px);
+}
+
+.box form .links {
+  display: flex;
+  justify-content: space-between;
+}
+.box form .links a {
+  color: rgb(117, 115, 115);
+  cursor: default;
+}
+.box form .links a:hover {
+  color: #fff;
+  font-size: large;
+  transition: 1s;
+  cursor: default;
+}
+.box form input[type="submit"] {
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  margin-top: 5px;
+  padding: 5px 25px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  width: 100px;
+}
+.box form input[type="submit"]:hover {
+  border: 1px solid rgb(144, 144, 224);
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 5px 25px;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: bolder;
+  width: 110px;
+  transition: 2s;
+}
+</style>
+</head>
+<body>
+    <div class="box">
+        <span class="borderline"></span>
+        <form action="">
+            <h2>Sign in</h2>
+            <div class="inputbox">
+                <input type="text" required>
+                <span>Username</span>
+                <i></i>
+            </div>
+            <div class="inputbox">
+                <input type="password" required>
+                <span>Enter Password</span>
+                <i></i>
+            </div>
+            <input type="submit" value="Login"><br>
+            <div class="links">
+                <a href="#">Sign up</a>
+                <a href="#">Forgot password</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

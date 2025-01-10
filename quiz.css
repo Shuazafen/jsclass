@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+
+ul li{
+    gap: 10px;
+}
+
+li{
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.3em;
+}
+
+button{
+    padding: 10px 15px;
+    border: 1px solid rgb(165, 164, 164);
+}
+
+#head{
+    font-size: 3em;
+    text-align: center;
+}

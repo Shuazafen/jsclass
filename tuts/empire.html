@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="empire.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .autoplay-progress {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      z-index: 10;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: var(--swiper-theme-color);
+    }
+
+    .autoplay-progress svg {
+      --progress: 0;
+      position: absolute;
+      left: 0;
+      top: 0px;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      stroke-width: 4px;
+      stroke: var(--swiper-theme-color);
+      fill: none;
+      stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+      stroke-dasharray: 125.6;
+      transform: rotate(-90deg);
+    }
+  </style>
+</head>
+
+<header>
+  <nav>
+      <ul>
+        <li class="logo">Empire</li>
+          <li class="nav"><a href="#">Home</a></li>
+          <li class="nav"><a href="#">Menu</a></li>
+          <li class="nav"><a href="#">Order-list</a></li>
+          <li class="nav"><a href="#">Contact</a></li>
+      </ul>
+  </nav>
+  </header>
+
+
+<body>
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+    
+      <div class="swiper-slide"><img src="images/khloe-arledge-ND3edEmzcdQ-unsplash.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="images/pixzolo-photography-aeESmmFKH0M-unsplash.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="images/chad-montano-MqT0asuoIcU-unsplash.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="images/casey-lee-awj7sRviVXo-unsplash.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="images/diego-ramirez-OC3lZI9P6kU-unsplash.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="images/emiliano-vittoriosi-OFismyezPnY-unsplash.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="images/jonathan-borba-Gkc_xM3VY34-unsplash.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="images/michele-blackwell-rAyCBQTH7ws-unsplash.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="images/krista-stucchio-2CZ0Zpuj-gU-unsplash.jpg" alt=""></div>
+    </div>
+  <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+    <div class="autoplay-progress">
+      <svg viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="20"></circle>
+      </svg>
+      <span></span>
+    </div>
+  </div>
+  
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    const progressCircle = document.querySelector(".autoplay-progress svg");
+    const progressContent = document.querySelector(".autoplay-progress span");
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      on: {
+     /*   autoplayTimeLeft(s, time, progress) {
+          progressCircle.style.setProperty("--progress", 1 - progress);
+          progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+        }
+      */      }
+    });
+  </script>
+
+  <div class="name">
+    <h1 class="vera">Empire Restuarant</h1>
+    <p>Taste Of Royalty</p>
+  </div>
+
+  <section class="second">
+      <img class="jollof" src="images/wallpaperflare.com_wallpaper (13).jpg" alt="">
+      <h1 class="fine">Fine Dinning Restuarant Worthy Of Emperors</h1>
+      <p class="tanto"><span class="empire">Empire's Restuarant: </span>A destination for both royals and locals alike
+        <br ./>Serving both tradition and special cuisine in a beautiful setting</p>
+  </section>
+
+  <section class="third">
+
+    <div class="head">
+      <h1 class="discover">
+       Discover The Variety of Dinning Options available
+      </h1>
+      <div class="space">
+      <p class="lorem">
+        One of a kind to do this i like how many ppl are in this we do not have any idea what do we say
+      </p>
+      </div>
+    </div>
+
+  </section>
+
+</body>
+
+</html>
+

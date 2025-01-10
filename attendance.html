@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin-top: 2%;
+            width: 35%;
+            text-align: center;
+        }
+        .delete_btn {
+            background-color: red;
+            color: white;
+            padding: 2%;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+    </style>
+    </head>
+    <body>
+
+        Name: <input type="text" id="name" !required>
+        Department: <input type="text" id="department" !important>
+        <button id="btn">Submit</button>
+
+        <table id="table">
+            <tr>
+                <th>Name</th>
+                <th>Department</th>
+                <th>ID Number</th>
+                <th>Action</th>
+            </tr>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+
+        <script>
+    let nameInput = document.getElementById('name'),
+        departmentInput = document.getElementById('department'),
+        tbody = document.getElementById('tbody'),
+        btn = document.getElementById('btn');
+
+    let idCounter = 1;
+
+    btn.addEventListener('click', () => {
+    //     const tr = document.createElement('tr');
+    //     const uniqueId = `id_${idCounter++}`;
+        
+    //     tr.innerHTML = `<td>${nameInput.value}</td>
+    //                     <td>${departmentInput.value}</td>
+    //                     <td>${uniqueId}</td>
+    //                     <td><button class="delete_btn" onclick="deleteRow(this)">Delete</button></td>`;
+    //     tbody.appendChild(tr);
+    //     nameInput.value = "";
+    //     departmentInput.value = "";
+    // });
+
+    // function deleteRow(button) {
+    //     const row = button.closest('tr');
+    //     row.remove();
+    console.log('i am clicked')
+     });
+</script>
+
+    </body>
+</html>

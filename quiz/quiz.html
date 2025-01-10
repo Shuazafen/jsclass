@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./quiz.css">
+    <title>Quiz App</title>
+</head>
+<body>
+ <div class="body">
+    <div class="dashboard">
+        <i class="fa fa-user-o"></i>
+        <p class="name">Ayodeji Emmanuel</p>
+        <p class="name">REG-2022</p>
+        <button type="button" class="btn btn-dark">Maths</button>
+        <button type="button" class="btn mt-3  btn-dark">English</button>
+        <button type="button" class="btn mt-3 btn-dark">General Study</button>
+        <i class="fa fa-clock-o"></i>
+        <p class="time">Timer</p>
+        <p class="time"><span id="min">00</span> : <span id="sec">00</span></p>
+        <button type="button" onclick="Start()" class="btn mt-3 btn-dark">Click To Start</button>
+    </div>
+
+
+
+    <div  class="quiz-dash">
+        <div class="row2">
+            <p class="timer"><span>1</span>/ <span>20</span></p>
+        <div class="row pt-2 text-white">
+            <p id="TIME"></p>
+            <p class="ml-3" id="day"></p>  
+        </div>
+        </div> 
+       <p class="question"><span class="questnum">1</span> .> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, quidem. </p>
+    <div class="icon">
+        <i class="fa fa-lightbulb-o"></i>
+       <p class="think"> Think</p>
+    </div>
+    <div class="choices mt-3 ">
+        <button id="optA" class="opt btn btn-outline-secondary text-left text-white"><span  class="ops">A</span></button>
+        <button id="optB" class="opt btn btn-outline-secondary text-left text-white"><span  class="ops">B</span></button>
+        <button id="optC" class="opt btn btn-outline-secondary text-left text-white"><span  class="ops">C</span></button>
+        <button id="optD" class="opt btn btn-outline-secondary text-left text-white"><span  class="ops">D</span></button>
+    </div>
+    <div class="buttons">
+        <button class="btn btn-dark"><i class="fa fa-angle-double-left"></i></button>
+        <button class="btn  btn-dark ml-2 "><i class="fa fa-angle-double-right"></i></button>
+    </div>
+    </div>
+    
+ </div>
+</body>
+    <script src="./quiz.js"></script>
+
+</html>

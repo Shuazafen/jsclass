@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="class7.css">
+</head>
+<body>
+    Name: <input type="text" id="name">
+    Department: <input type="text" id="Department">
+    ID-Number: <input type="text" id="id">
+    <button id="btn">Submit</button>
+
+
+
+    <table id="table">
+        <tbody>
+        <tr>
+           <th>Name</th>
+          <th>Department</th>
+          <th>ID</th>
+          <th>Action</th>
+        </tr>
+        </tbody>
+    </table>
+
+    <script>
+        let name = document.getElementById('name'),
+         department = document.getElementById('department'),
+         id = document.getElementById('id'),
+         tbody = document.getElementById('tbody'),
+         btn = document.getElementById('btn')
+
+        btn.addEventListener('click', () =>{
+            const tr = document.createElement('tr')
+            tr.innerHTML = `<td>${name.value}</td>
+             <td>${department.value}</td>
+             <td>${id.value}</td>
+             <td><button id = "delete_btn">Delete</button></td>
+             `
+
+             table.appendChild(tr)
+             name.value = ""
+             department.value = ""
+             id.value = ""
+             let delete_btn = document.getElementById("delete_btn")
+             delete_btn.addEventListener("click", function(){
+                let btn = this.parentElement
+                let parent = btn.parentElement
+                tbody.removeChild(parent)
+             })
+        }) 
+    
+        
+    </script>
+  
+
+</body>
+</html>

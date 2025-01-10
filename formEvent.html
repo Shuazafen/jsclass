@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>To Do LIst</h1>
+
+    <form id="myForm">
+        <input type="text" id="name"> 
+        <input type="submit" value="Submit">
+    </form>
+
+    <p id="pname"></p>
+    
+
+    <script>
+        let form = document.getElementById("myForm")
+
+        form.addEventListener("submit", submitForm)
+
+        function submitForm(e) {
+            e.preventDefault()
+            
+            let name = document.getElementById("name")
+            let email = document.getElementById("email")
+
+            document.getElementById("pname").innerHTML = name.value
+            myForm.appendChild(pname);
+
+            p.classList.add() 
+
+
+            name.value = ""
+            email.value = ""
+
+
+        }
+    </script>
+    
+</body>
+</html>

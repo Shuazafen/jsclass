@@ -1,0 +1,124 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body{
+  background-color: #abbb9a;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  background-color: transparent;
+
+  position: absolute;
+}
+
+nav ul li{
+  display: inline;
+  list-style: none;
+}
+
+li a{
+  gap: 20px;
+  text-decoration: none;
+}
+
+.nav{
+  margin-left: 260px;
+}
+
+.logo{
+  font-size: 3em;
+  color: blue;
+}
+
+
+.name{
+  background-color: #fff;
+  width: 900px;
+  height: 100px;
+  margin-left: 350px;
+  align-items: center;
+  text-align: center;
+  padding: 20px 40px;
+  margin-top: 30px;
+  box-shadow: 5px 5px 10px #555;
+}
+
+.vera{
+  color: blue;
+
+}
+
+.second{
+  margin-top: 30px;
+}
+
+.jollof{
+  width: 550px;
+  height: 800px;
+  margin-left: 100px;
+  filter: drop-shadow(5px 5px 10px #555);
+}
+
+.fine{
+  margin-left: 750px;
+  margin-top: -800px;
+  font-size: 4.5em;
+  color: blue;
+}
+
+.tanto{
+  margin-left: 750px;
+}
+
+span{
+  font-size: 2.5em;
+  margin-left: 50px;
+}
+
+.third{
+  background-image: url(images/wallpaperflare.com_wallpaper\ \(1\).jpg);
+
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  margin-top: 760px;
+}
+
+.discover{
+  margin-top: 150px;
+  margin-left: 300px;
+  font-size: 5.5em;
+  font-family:  'cursive';
+}
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Roboto+Condensed:ital,wght@1,300&display=swap');
+
+.space{
+  width: 1400px;
+  height: 250px;
+  margin-left: 60px;
+  margin-top: 20px;
+  backdrop-filter: blur(5px);
+  box-shadow: (5px 5px 10px black);
+}
+
+.lorem{
+  font-size: 2em;
+  margin-left: 50px;
+  margin-top: 5px;
+  color: white;
+  padding: 50px 30px;
+}

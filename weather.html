@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <h3 id="location"></h3>
+        <p id="latlon"></p>
+        <input type="text" id="place">
+        <button onclick="getweatherdata()">Get Data</button>
+
+        <script>
+
+            function getweatherdata() {
+                let place = document.getElementById("place").value;
+            const apiKey = "j7ajGxkypkroZUmWpwWkTe1DcCBe5RkZ"
+        fetch(`https://api.tomorrow.io/v4/weather/realtime?location=${place}&apikey=${apiKey}`)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            document.getElementById("place").innerHTML = data.location.name
+            document.getElementById("latlon").innerHTML = data.data.time + "<br/>"
+            document.getElementById("location").innerHTML = data.location.name
+            document.getElementById("latlon").innerHTML += "<b>Lat:</b> "+ data.location.lat + "<br>"
+            document.getElementById("latlon").innerHTML +="<b>Lon:</b> "+ data.location.lon
+        })
+    }
+
+    
+
+            
+
+    </script>
+    </body>
+
+    </html>

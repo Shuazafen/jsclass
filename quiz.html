@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+    <h1 id="head">Quiz Game</h1>
+
+    <p>score: <span id="score">0</span></p>
+
+    <ul id="question"></ul>
+
+    <button>Submit</button>
+
+
+
+    <script>
+        let score = 0
+       async function FetchQuestion() {
+            try {
+                const response = await fetch("https://opentdb.com/api.php?amount=10&type=boolean")
+                const data = await response.json()
+                console.log(data)
+                const question = data.results
+                for(let i =0; i < question.length; i++) {
+                    const questionContainer = document.getElementById("question") 
+                    let li = document.createElement('li')
+                    let true_btn = document.createElement("button")
+                    true_btn.textContent = "True"
+                    let false_btn = document.createElement("button")
+                    false_btn.textContent = "False"
+                    true_btn.addEventListener("click", function() {
+                        checkAnswer(true)
+                        true_btn.disabled = true
+                        false_btn.disabled = true
+                    })
+
+                       false_btn.addEventListener("click", function() {
+                        checkAnswer(false)
+                        true_btn.disabled = true
+                        false_btn.disabled = true
+                    })
+
+                    li.innerHTML =  `${question[i].question} <br /> `
+                    li.appendChild(true_btn)
+                    li.appendChild(false_btn)
+                    questionContainer.appendChild(li)
+                }
+            }
+
+            catch(error) {
+                console.error("Error in fetching ", error)
+            }
+
+    
+        }
+
+        function checkAnswer(userAnswer) {
+            if (userAnswer === true) {
+                score++;
+                document.getElementById("score").innerHTML = score;
+            }
+        }
+
+    FetchQuestion() 
+
+   /* async function FetchAnswer() {
+            try {
+                
+                const data = await response.json()
+                console.log(data)
+                const answer = data.results.correct_answer
+
+            }
+            catch(error) {
+                console.error("Error in fetching ", error)
+            }
+
+    
+        }
+
+    FetchAnswer() */
+
+
+
+
+    
+    </script>
+    
+</body>
+</html>

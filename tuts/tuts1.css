@@ -1,0 +1,193 @@
+  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+main{
+  background: #6610f2;
+}
+
+.container{
+  max-width: 1580px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+}
+
+.nav_logo{
+  padding: 10px;
+}
+
+.menu_items{
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+a{
+  color: #fff;
+  text-decoration: none;
+}
+
+/* hero */
+
+.hero{
+  min-height: 100vh;
+  width: 100%;
+  background: url(images/bg-dot.png), url(images/bg-dot.png), url(images/bg-round.png), url(images/bg-tree.png), url(images/bg-bottom-hero.png);
+  background-position: 10px 10px, bottom 190px right 12px, left 55% top -1%, left 45% bottom -1px, center bottom -1px;
+  background-repeat: no-repeat;
+}
+
+.hero .row{
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  padding: 0 60px;
+  justify-content: space-between;
+}
+
+.hero_img{
+  margin-left: 15px;
+  width: 100%;
+}
+
+.button{
+  display: flex;
+  margin-top: 25px;
+  gap: 10px;
+}
+
+.btn{
+  padding: 14px 26px;
+  background: #fff;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:last-child{
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+}
+
+.btn:last-child:hover{
+  background: #fff;
+  color: #6610f2;
+}
+
+.hero .column{
+  width: 40%;
+}
+
+.hero .row h2{
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.hero .row h2,
+.hero .row p{
+  color: #fff;
+}
+
+#menu_toogle{
+  display: none;
+}
+
+/* Responsive */
+@media (width < 860px) {
+
+  #menu_toogle{
+    display: block;
+  }
+
+  .nav{
+    background-color: #fff;
+    padding: 0 20px;
+  }
+
+  .menu_items{
+    position: fixed;
+    top: 0;
+    width: 260px;
+    background-color: #fff;
+    height: 100%;
+    left: 100%;
+    padding: 50px 30px 30px;
+    flex-direction: column;
+    transition: all 0.5s ease;
+  }
+
+  .showMenu .menu_items{
+     left: 0;
+  }
+
+  a{
+    color: #333;
+  }
+
+  #menu_toggle{
+    width: 20px;
+    cursor: pointer;
+  }
+
+   .menu_items #menu_toggle{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .hero{
+    padding-top: 140px;
+
+  }
+
+  .hero .row{
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .hero .row .column{
+    width: 100%;
+}
+}
+
+@media (width < 600px) {
+
+  .hero{
+    padding-top: 100px;
+  }
+
+
+  .hero .h2{
+    font-size: 26px;
+  }
+
+  .button{
+    justify-content: center;
+  }
+
+  .btn{
+    padding: 10px 16px;
+  }
+}

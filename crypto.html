@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>b15a31c8-b057-489d-9eb5-f51ce4925682</p>
+
+    <style>
+        
+        const axios = require('axios');
+
+let response = null;
+new Promise(async (resolve, reject) => {
+  try {
+    response = await axios.get('https://sandbox-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
+      headers: {
+        'X-CMC_PRO_API_KEY': 'b15a31c8-b057-489d-9eb5-f51ce4925682',
+      },
+    });
+  } catch(ex) {
+    response = null;
+    // error
+    console.log(ex);
+    reject(ex);
+  }
+  if (response) {
+    // success
+    const json = response.data;
+    console.log(json);
+    resolve(json);
+  }
+});
+
+
+    </style>
+</body>
+</html>

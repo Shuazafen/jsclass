@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital@1&family=Roboto+Condensed:ital,wght@1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: #6610f2;
+    display: inline;
+    margin-left: 50px;
+}
+
+
+header{
+    position: fixed;  
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99; 
+}  
+
+.navigation a{
+  position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;  
+    font-weight: 500;
+    margin-left: 50px;
+}
+
+
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: left;
+    transform: scaleX(0); 
+    transition: transform .5s;
+}
+
+.navigation a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.navigation .login_btn{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navigation .login_btn:hover{
+    background: #fff;
+    color: #162938;
+}
+
+.lorem{
+  margin-top: 10px;
+}
+
+.hero{
+   align-items: left;
+   position: relative;
+   background-color: #6610f2;
+   min-height: 100vh;
+   width: 100%;
+   background: url(/tuts/images/bg-dot.png), url(/tuts/images/bg-dot.png), url(/tuts/images/bg-round.png), url(/tuts/images/bg-tree.png);
+   background-position: 1px 10px, bottom 215px right 10px, left 50% top -1%, left 305px bottom -1px;
+   background-repeat: no-repeat;
+}
+
+.hero .row{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    height: 100%;
+    width: 100%;
+    padding: 0 60px;
+    gap: 30px;
+    justify-content: space-between;
+    max-width: 1000px;
+}
+
+.column{
+    margin-top: 200px;
+}
+
+.phero{
+    color: #fff;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.new{
+    font-size: 3.5em;
+    color: #fff;
+    font-weight: 600px;
+    max-width: 700px;
+}
+
+.curveImg {
+    position: absolute;
+    bottom: 0;
+    width: 1537px;
+    pointer-events: none;
+  }
+  
+  .second{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  }
+
+  .top{
+    margin-left: 22%;
+    align-items: center;
+    margin-top: 40px;
+    width: 900px;
+    height: 150px;
+    background-color: #fff;
+    padding: 30px 310px;
+    box-shadow: 3px 3px 5px #444;
+
+  }
+
+  .perc-off{
+    font-size: 2.3em;
+    font-weight: 500;
+    color: #6610f2;
+  }
+
+
+  .img-holder{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    margin-left: 250px;
+    margin-top: 50px;
+  }
+
+  .main_box{
+    width: 400px;
+    height: 470px;
+    background-color: #fff;
+    box-shadow: 2px 3px 5px #162938;
+    border-radius: 7px;
+  }
+
+  .sneakers{
+    height: 300px;
+    width: 400px;
+  }
+
+  .nike{
+    margin-left: 130px;
+    font-size: 1.5em;
+    font-weight: 400;
+  }
+
+  .button{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+
+  .cart{
+    margin-left: 160px;
+  }
+
+  .cart_btn{
+    width: 100px;
+    height: 30px;
+    background: transparent;
+    border: 2px solid #6610f2;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #162938;
+    font-weight: 500;
+    transition: .5s;
+  }
+
+  .buy_btn{
+    width: 100px;
+    height: 30px;
+    background: transparent;
+    border: 2px solid #6610f2;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #162938;
+    font-weight: 500;
+    transition: .5s;
+  }
+
+  .cart_btn:hover{
+    background-color: #6610f2;
+    color: #fff;
+  }
+
+  .buy_btn:hover{
+    background-color: #6610f2;
+    color: #fff;
+  }
+
+  .third{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+  }
+
+  .top-1{
+    margin-left: 22%;
+    align-items: center;
+    margin-top: 40px;
+    width: 900px;
+    height: 150px;
+    background-color: #fff;
+    padding: 50px 330px;
+    box-shadow: 3px 3px 5px #444;
+  }
+
+  .sneaker{
+    height: 350px;
+    width: 370px;
+  }
+
+  .fourth{
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #fbfbf9;
+  }
+
+  .hurry{
+    margin-top: 200px;
+    margin-left: 100px;
+  }
+
+  .deals{
+    font-size: 1.5em;
+    margin-top: -30px;
+  }
+
+  .day{
+    font-size: 2.5em;
+  }
+
+  .discount{
+    font-weight: 500;
+    font-size: 1em;
+  }
+
+  .more{
+    margin-top: 50px;
+    width: 280px;
+    height: 40px;
+    background: #7b54b8;
+    outline: none;
+    font-size: 1.3em;
+    font-weight: 400;
+    border: 2px solid #7b54b8;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+
+  .more:hover{
+    color: white;
+    background-color: #6610f2;
+  }
+
+  .point{
+      margin-left: 90px;
+  }
+
+  footer{
+    width: 100%;
+    height: 500px;
+    background-color: #6610f2;
+  }
+
+  .curve1{
+    width: 100%;
+  }
+
+  .foot{
+    display: grid;
+    grid-template-columns: 370px auto auto;
+    grid-template-rows: 40px;
+    margin-top: -250px;
+    margin-left: 70px;
+    gap: 40px;
+  }
+
+  .site{
+    text-align: center;
+  }
+
+  .in-touch{
+    max-width: 370px;
+    text-align: center;
+  }
+
+  .down{
+    margin-left: 100px;
+    margin-top: 270px;
+    color: #fff;
+  }
+
+  /* media Responsiveness */
+  
+  @media (width < 860px) {
+    #menu_toggle {
+      display: block;
+    }
+    .nav {
+      padding: 0 20px;
+      background-color: #fff;
+    }
+  
+    .menu_items {
+      position: fixed;
+      top: 0;
+      width: 260px;
+      background-color: #fff;
+      height: 100%;
+      left: -100%;
+      padding: 50px 30px 30px;
+      flex-direction: column;
+      transition: all 0.5s ease;
+    }
+    .showMenu .menu_items {
+      left: 0;
+    }
+    a {
+      color: #333;
+    }
+    #menu_toggle {
+      width: 20px;
+      cursor: pointer;
+    }
+    .menu_items #menu_toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .hero {
+      padding-top: 130px;
+    }
+    .hero .row {
+      flex-direction: column;
+      padding: 0 20px;
+      justify-content: center;
+    }
+    .hero .row .column {
+      width: 100%;
+    }
+  }
+  
